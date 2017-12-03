@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20171203162059) do
     t.datetime "updated_at",      null: false
     t.string   "image_url"
     t.decimal  "price_per_nigth"
+    t.decimal  "price_per_night"
   end
 
 end
