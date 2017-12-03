@@ -11,6 +11,12 @@
 #  updated_at  :datetime         not null
 #  image_url   :string
 #
-
+#validates  :description, :beds, :guests, :image_url, presence: true
+	#validates  :beds, :guests, numericality: {only_integer: true}
 class Room < ActiveRecord::Base
+	#Room.clear_validators!
+	validates  :title,:description, :beds, :guests, :image_url, presence: true
+	validates  :beds, :guests, numericality: {only_integer: true}
+	validates  :description, length: {maximum: 400}
 end
+ 
