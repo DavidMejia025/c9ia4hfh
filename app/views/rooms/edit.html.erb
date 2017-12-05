@@ -1,0 +1,41 @@
+<h1> Edit Room </h1>
+
+
+
+<%=  form_for @room  do |form| %>
+		<p>
+			<%= form.label :title %> <br>
+			<%= form.text_field :title %>
+		</p>
+
+		<p>
+			<%= form.label :description %><br>
+			<%= form.text_area :description %> <br>
+		</p>
+
+		<p>
+			<%= form.label :beds %><br>
+			<%= form.text_field :beds %> <br>
+		</p>
+
+		<p>
+			<%= form.label :guests %><br>
+			<%= form.text_field :guests %> <br>
+		</p>
+
+		<p>
+			<%= form.label :Image %><br>
+			<%= form.text_field :image_url %> <br>
+		</p>
+
+		<p>
+			<%= form.label :Price %><br>
+			<%= form.text_field :price_per_night %> <br>
+		</p>
+
+		<p> 
+			<%= form.submit %>
+		</p>
+<% end %>
+
+<%= link_to "Back", rooms_path %>
